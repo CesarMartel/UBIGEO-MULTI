@@ -34,7 +34,7 @@ urlpatterns = [
         path('profiles/', include('users_profiles.urls')),
         
         # 🩺 Módulo 3: Pacientes y Diagnósticos
-        path('api/patients/', include('patients_diagnoses.urls')),
+        path('patients/', include('patients_diagnoses.urls')),
         
         # 👨‍⚕️ Módulo 4: Terapeutas (incluye ubicaciones)
         path('therapists/', include('therapists.urls')),
@@ -44,9 +44,13 @@ urlpatterns = [
         
         # ⚙️ Módulo 6: Historiales y Configuraciones
         path('configurations/', include('histories_configurations.urls')),
+        
+        # Modulo 7: Ubicaciones Geograficas
+        path('locations/', include('ubi_geo.urls')),
 
         # 📊 Módulo 8: Reportes de Empresas
         path('company/', include('company_reports.urls')),
+
     ])),
 ]
 

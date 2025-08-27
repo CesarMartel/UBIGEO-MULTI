@@ -1,8 +1,9 @@
 import re
 from datetime import date
 from rest_framework import serializers
-from therapists.models import Therapist, Region, Province, District
-from .location import RegionSerializer, ProvinceSerializer, DistrictSerializer
+from therapists.models import Therapist 
+from ubi_geo.models import Region, Province, District
+from ubi_geo.serializers import RegionSerializer, ProvinceSerializer, DistrictSerializer
 
 class TherapistSerializer(serializers.ModelSerializer):
     # Serializadores anidados para mostrar datos completos de ubicaciones

@@ -1,7 +1,7 @@
 from django.db import models
-from .region import Region
-from .province import Province
-from .district import District
+from ubi_geo.models import Region
+from ubi_geo.models import Province
+from ubi_geo.models import District
 
 
 class Therapist(models.Model):

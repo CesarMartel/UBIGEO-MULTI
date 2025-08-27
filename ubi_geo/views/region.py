@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from rest_framework.viewsets import ReadOnlyModelViewSet
-from therapists.models import Region
-from therapists.serializers.location import RegionSerializer
+from ubi_geo.models import Region
+from ubi_geo.serializers.location import RegionSerializer
 
 
 class RegionViewSet(ReadOnlyModelViewSet):

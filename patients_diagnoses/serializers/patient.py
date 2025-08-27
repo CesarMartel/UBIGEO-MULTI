@@ -1,15 +1,12 @@
 from rest_framework import serializers
 from ..models.patient import Patient
-from therapists.serializers.region import RegionSerializer
-from therapists.serializers.province import ProvinceSerializer
-from therapists.serializers.district import DistrictSerializer
+from ubi_geo.serializers.region import RegionSerializer
+from ubi_geo.serializers.province import ProvinceSerializer
+from ubi_geo.serializers.district import DistrictSerializer
 # from therapists.serializers.country import CountrySerializer  # TODO: Country no existe aún
 from histories_configurations.serializers.document_type import DocumentTypeSerializer
 from django.core.validators import RegexValidator
 from datetime import date
-
-
-
 
 class PatientSerializer(serializers.ModelSerializer):
     region = RegionSerializer(read_only=True)

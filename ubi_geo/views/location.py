@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ReadOnlyModelViewSet
-from therapists.models import Region, Province, District
-from therapists.serializers.location import RegionSerializer, ProvinceSerializer, DistrictSerializer
+from ubi_geo.models import Region, Province, District
+from ubi_geo.serializers.location import RegionSerializer, ProvinceSerializer, DistrictSerializer
 
 class RegionViewSet(ReadOnlyModelViewSet):
     queryset = Region.objects.all().order_by("name")

@@ -3,7 +3,7 @@ from django.db import transaction
 from pathlib import Path
 import csv
 
-from therapists.models import Region, Province, District
+from ubi_geo.models import Region, Province, District
 
 
 class Command(BaseCommand):

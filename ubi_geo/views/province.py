@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from rest_framework.viewsets import ReadOnlyModelViewSet
-from therapists.models import Province
-from therapists.serializers.location import ProvinceSerializer
+from ubi_geo.models import Province
+from ubi_geo.serializers.location import ProvinceSerializer
 
 
 class ProvinceViewSet(ReadOnlyModelViewSet):

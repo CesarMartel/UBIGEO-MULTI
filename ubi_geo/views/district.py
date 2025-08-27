@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from rest_framework.viewsets import ReadOnlyModelViewSet
-from therapists.models import District
-from therapists.serializers.location import DistrictSerializer
+from ubi_geo.models import District
+from ubi_geo.serializers.location import DistrictSerializer
 
 
 class DistrictViewSet(ReadOnlyModelViewSet):

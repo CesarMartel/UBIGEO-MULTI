@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from therapists.models import Province, Region
+from ubi_geo.models import Province, Region
 
 
 class ProvinceSerializer(serializers.ModelSerializer):
