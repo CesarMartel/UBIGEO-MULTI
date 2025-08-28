@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Apps propias
+    'tenant',
+    'users',
+    'ubigeo',
+    'paciente',
+    'therapists',
+    'clinica',
+    'cita',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tenant.middleware.TenantMiddleware',  # Middleware para manejar tenants
 ]
 
 ROOT_URLCONF = 'Config.urls'
@@ -74,12 +84,8 @@ WSGI_APPLICATION = 'Config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'clinicas',      # Nombre de tu base de datos
-        'USER': 'django_user',         # Usuario de MySQL Workbench
-        'PASSWORD': '1234',  # Reemplaza con tu contraseña real
-        'HOST': '127.0.0.1',     # Si MySQL está local, si no la IP del servidor
-        'PORT': '3306',          # Puerto por defecto de MySQL
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -101,6 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Configuración del modelo de usuario personalizado
+AUTH_USER_MODEL = 'users.User'
 
 
 # Internationalization
