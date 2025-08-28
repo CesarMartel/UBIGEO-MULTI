@@ -76,9 +76,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'clinicas',      # Nombre de tu base de datos
-        'USER': 'django_user',         # Usuario de MySQL Workbench
-        'PASSWORD': '1234',  # Reemplaza con tu contraseña real
-        'HOST': '127.0.0.1',     # Si MySQL está local, si no la IP del servidor
+        'USER': 'root',         # Usuario de MySQL Workbench
+        'PASSWORD': '',  # Reemplaza con tu contraseña real
+        'HOST': 'localhost',     # Si MySQL está local, si no la IP del servidor
         'PORT': '3306',          # Puerto por defecto de MySQL
     }
 }
